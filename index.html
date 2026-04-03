@@ -3,74 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #007BFF;
-            color: white;
-            padding: 20px;
-        }
-
-        .container {
-            padding: 40px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #555;
-            font-size: 18px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 10px;
-            background-color: #ddd;
-        }
-    </style>
+    <title>DemoMart - Best Gadget & Fashion</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
 
-<header>
-    <h2>My Website</h2>
-</header>
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<div class="container">
-    <h1>Welcome to My Website</h1>
-    <p>This is my personal website. Thank you for visiting.</p>
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/products.html?category=electronics">Electronics</a></li>
+                                <li><a class="dropdown-item" href="pages/products.html?category=fashion">Fashion</a></li>
+                                <li><a class="dropdown-item" href="pages/products.html?category=home">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="pages/products.html?category=sports">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/products.html?deal=super">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/products.html?offer=special">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pages/about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="pages/contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="pages/faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="pages/how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="pages/tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="pages/terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-    <a href="#" class="btn">Learn More</a>
-</div>
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="pages/cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="pages/member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="pages/login.html" class="text-decoration-none">Login</a> <a href="pages/signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<footer>
-    <p>© 2026 My Website</p>
-</footer>
+    <!-- Hero Banner Section -->
+    <section class="hero-banner py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="pink-line mb-3"></div>
+                        <p class="text-muted mb-2">Best Gadget & Fashion</p>
+                        <h1 class="hero-title mb-3">
+                            30% Off <span class="text-primary">Winter Sale</span>
+                        </h1>
+                        <p class="text-muted mb-4">Promo Code</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-description">
+                        <p class="lead mb-4">This year, our new summer collection will shelter you from the harsh elements of a world that.</p>
+                        <button class="btn btn-primary btn-lg rounded-pill px-5">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Product/Offer Cards Section -->
+    <section class="product-cards py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Baby & Kids Clothings Card -->
+                <div class="col-md-4">
+                    <div class="card product-card promo-card promo-card-kids h-100 position-relative">
+                        <div class="card-body p-4">
+                            <div class="product-card-content">
+                                <p class="text-muted mb-1 small">Baby & Kids</p>
+                                <h3 class="fw-bold mb-4">Clothings</h3>
+                                <button class="btn btn-dark rounded-pill px-4">Shop Now</button>
+                            </div>
+                            <div class="promo-visual promo-visual-kids" aria-hidden="true">
+                                <div class="promo-bubble promo-bubble-lg"></div>
+                                <div class="promo-bubble promo-bubble-sm"></div>
+                                <div class="promo-photo-frame">
+                                    <img src="assets/images/default-product.svg" alt="Default kids fashion visual" class="promo-photo">
+                                </div>
+                                <div class="promo-tag">New Season</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mid Summer Sale Card -->
+                <div class="col-md-4">
+                    <div class="card product-card promo-card promo-card-summer h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="promo-sunburst" aria-hidden="true"></div>
+                            <p class="summer-text mb-2">Mid Summer</p>
+                            <h2 class="fw-bold mb-2">
+                                UP TO 30 <span class="text-primary">% OFF</span>
+                            </h2>
+                            <p class="text-muted">Instore & Outlets</p>
+                            <div class="promo-summer-visual" aria-hidden="true">
+                                <div class="promo-orb promo-orb-left"></div>
+                                <div class="promo-orb promo-orb-right"></div>
+                                <div class="promo-wave promo-wave-one"></div>
+                                <div class="promo-wave promo-wave-two"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kids Bag Card -->
+                <div class="col-md-4">
+                    <div class="card product-card promo-card promo-card-bags h-100">
+                        <div class="card-body p-4">
+                            <p class="text-muted mb-1 small">Feel Amazing</p>
+                            <h3 class="fw-bold mb-2">EVERYDAY</h3>
+                            <p class="text-muted mb-3 small">Kids Bag</p>
+                            <button class="btn btn-dark rounded-pill px-4 mb-3">Shop Now</button>
+                            <div class="bags-grid">
+                                <div class="bag-item bag-1">
+                                    <span class="bag-handle"></span>
+                                </div>
+                                <div class="bag-item bag-2">
+                                    <span class="bag-handle"></span>
+                                </div>
+                                <div class="bag-item bag-3">
+                                    <span class="bag-handle"></span>
+                                </div>
+                                <div class="bag-item bag-4">
+                                    <span class="bag-handle"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card stat-card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-star-fill text-danger fs-1 mb-3"></i>
+                            <h2 class="fw-bold mb-2">#1</h2>
+                            <p class="text-muted mb-0">eCommerce Platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card stat-card stat-card-highlight h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-chat-dots-fill text-white fs-1 mb-3"></i>
+                            <h2 class="fw-bold text-white mb-2">25k+</h2>
+                            <p class="text-white mb-0">Client Testimonials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card stat-card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-shield-check text-danger fs-1 mb-3"></i>
+                            <h2 class="fw-bold mb-2">1 Million</h2>
+                            <p class="text-muted mb-0">Real Customer & Buyers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products py-5">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-6">
+                    <h2 class="section-title fw-bold">Featured Products</h2>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-danger mb-2 fw-bold">Limited time only!</p>
+                    <div class="countdown-timer d-flex justify-content-md-end justify-content-start gap-2">
+                        <div class="countdown-box">
+                            <span id="hours">02</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span id="minutes">35</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span id="seconds">40</span>
+                        </div>
+                        <div class="countdown-box">
+                            <span id="milliseconds">40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Product Cards -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-danger text-white">New</div>
+                            <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                <i class="bi bi-phone fs-1 text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Smartphone Pro</h5>
+                            <p class="text-muted small mb-2">Latest Technology</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$299.99</span>
+                                <span class="text-muted text-decoration-line-through">$399.99</span>
+                            </div>
+                                    <a href="pages/product-detail.html" class="btn btn-primary w-100 mt-3 rounded-pill">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-success text-white">Sale</div>
+                            <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                <i class="bi bi-headphones fs-1 text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <p class="text-muted small mb-2">Premium Sound</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$149.99</span>
+                                <span class="text-muted text-decoration-line-through">$199.99</span>
+                            </div>
+                                    <a href="pages/product-detail.html" class="btn btn-primary w-100 mt-3 rounded-pill">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-warning text-white">Hot</div>
+                            <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                <i class="bi bi-laptop fs-1 text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop Ultra</h5>
+                            <p class="text-muted small mb-2">High Performance</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$899.99</span>
+                                <span class="text-muted text-decoration-line-through">$1199.99</span>
+                            </div>
+                                    <a href="pages/product-detail.html" class="btn btn-primary w-100 mt-3 rounded-pill">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-info text-white">Trending</div>
+                            <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                <i class="bi bi-watch fs-1 text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Watch</h5>
+                            <p class="text-muted small mb-2">Fitness Tracker</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$199.99</span>
+                                <span class="text-muted text-decoration-line-through">$249.99</span>
+                            </div>
+                                    <a href="pages/product-detail.html" class="btn btn-primary w-100 mt-3 rounded-pill">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="pages/about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="pages/how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="pages/tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="pages/terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="pages/faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+
+
+

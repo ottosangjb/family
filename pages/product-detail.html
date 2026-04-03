@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="products.html" class="text-decoration-none">Products</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Smartphone Pro Max</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Product Images -->
+                <div class="col-lg-6 mb-4">
+                    <div class="main-product-image mb-3">
+                        <div class="product-badge bg-danger text-white position-absolute top-0 start-0 m-3">New</div>
+                        <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center" style="height: 500px; border-radius: 15px;">
+                            <i class="bi bi-phone fs-1 text-muted" style="font-size: 8rem !important;"></i>
+                        </div>
+                    </div>
+                    <div class="product-thumbnails d-flex gap-2">
+                        <div class="thumbnail active border rounded p-2" style="width: 100px; height: 100px; cursor: pointer;">
+                            <div class="bg-light h-100 d-flex align-items-center justify-content-center rounded">
+                                <i class="bi bi-phone text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail border rounded p-2" style="width: 100px; height: 100px; cursor: pointer;">
+                            <div class="bg-light h-100 d-flex align-items-center justify-content-center rounded">
+                                <i class="bi bi-phone text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail border rounded p-2" style="width: 100px; height: 100px; cursor: pointer;">
+                            <div class="bg-light h-100 d-flex align-items-center justify-content-center rounded">
+                                <i class="bi bi-phone text-muted"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail border rounded p-2" style="width: 100px; height: 100px; cursor: pointer;">
+                            <div class="bg-light h-100 d-flex align-items-center justify-content-center rounded">
+                                <i class="bi bi-phone text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="col-lg-6">
+                    <h1 class="product-title fw-bold mb-3">Smartphone Pro Max</h1>
+                    <div class="product-rating mb-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <div>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </div>
+                            <span class="text-muted">(4.5) 128 Reviews</span>
+                            <span class="text-success ms-3"><i class="bi bi-check-circle"></i> In Stock</span>
+                        </div>
+                    </div>
+
+                    <div class="product-price mb-4">
+                        <h2 class="text-primary fw-bold mb-2">$299.99</h2>
+                        <p class="text-muted mb-0">
+                            <span class="text-decoration-line-through me-2">$399.99</span>
+                            <span class="badge bg-danger">25% OFF</span>
+                        </p>
+                    </div>
+
+                    <div class="product-description mb-4">
+                        <h5 class="fw-bold mb-3">Description</h5>
+                        <p class="text-muted">Experience the future of smartphones with our latest Pro Max model. Featuring cutting-edge technology, stunning design, and exceptional performance. This device is perfect for professionals and tech enthusiasts who demand the best.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>6.7-inch Super Retina XDR Display</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>128GB Internal Storage</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Triple Camera System with Night Mode</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>5G Connectivity</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Face ID Security</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>All-Day Battery Life</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options mb-4">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Storage:</label>
+                            <div class="btn-group" role="group">
+                                <input type="radio" class="btn-check" name="storage" id="storage128" checked>
+                                <label class="btn btn-outline-primary" for="storage128">128GB</label>
+                                <input type="radio" class="btn-check" name="storage" id="storage256">
+                                <label class="btn btn-outline-primary" for="storage256">256GB</label>
+                                <input type="radio" class="btn-check" name="storage" id="storage512">
+                                <label class="btn btn-outline-primary" for="storage512">512GB</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Color:</label>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-dark rounded-circle" style="width: 40px; height: 40px; background-color: #000;"></button>
+                                <button class="btn btn-outline-secondary rounded-circle" style="width: 40px; height: 40px; background-color: #fff;"></button>
+                                <button class="btn btn-outline-primary rounded-circle" style="width: 40px; height: 40px; background-color: #0d6efd;"></button>
+                                <button class="btn btn-outline-danger rounded-circle" style="width: 40px; height: 40px; background-color: #dc3545;"></button>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Quantity:</label>
+                            <div class="input-group" style="width: 150px;">
+                                <button class="btn btn-outline-secondary" type="button" id="decreaseQty">-</button>
+                                <input type="number" class="form-control text-center" value="1" min="1" max="10" id="quantity">
+                                <button class="btn btn-outline-secondary" type="button" id="increaseQty">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions d-flex gap-3 mb-4">
+                        <button class="btn btn-primary btn-lg flex-fill rounded-pill">
+                            <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg rounded-pill">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg rounded-pill">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+
+                    <div class="product-features border-top pt-4">
+                        <div class="row g-3">
+                            <div class="col-6 col-md-3 text-center">
+                                <i class="bi bi-truck fs-3 text-primary mb-2 d-block"></i>
+                                <small class="text-muted">Free Shipping</small>
+                            </div>
+                            <div class="col-6 col-md-3 text-center">
+                                <i class="bi bi-arrow-repeat fs-3 text-primary mb-2 d-block"></i>
+                                <small class="text-muted">30-Day Returns</small>
+                            </div>
+                            <div class="col-6 col-md-3 text-center">
+                                <i class="bi bi-shield-check fs-3 text-primary mb-2 d-block"></i>
+                                <small class="text-muted">1 Year Warranty</small>
+                            </div>
+                            <div class="col-6 col-md-3 text-center">
+                                <i class="bi bi-headset fs-3 text-primary mb-2 d-block"></i>
+                                <small class="text-muted">24/7 Support</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Specifications</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reviews (128)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="shipping-tab" data-bs-toggle="tab" data-bs-target="#shipping" type="button" role="tab">Shipping & Returns</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content border border-top-0 p-4 rounded-bottom" id="productTabsContent">
+                        <!-- Specifications Tab -->
+                        <div class="tab-pane fade show active" id="specs" role="tabpanel">
+                            <h5 class="fw-bold mb-4">Technical Specifications</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td class="fw-bold" style="width: 40%;">Display</td>
+                                            <td>6.7-inch Super Retina XDR OLED</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Processor</td>
+                                            <td>A16 Bionic Chip</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Storage</td>
+                                            <td>128GB / 256GB / 512GB</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Camera</td>
+                                            <td>48MP Main, 12MP Ultra Wide, 12MP Telephoto</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Battery</td>
+                                            <td>Up to 29 hours video playback</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <table class="table table-borderless">
+                                        <tr>
+                                            <td class="fw-bold" style="width: 40%;">Operating System</td>
+                                            <td>iOS 17</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Connectivity</td>
+                                            <td>5G, Wi-Fi 6E, Bluetooth 5.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Security</td>
+                                            <td>Face ID, Touch ID</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Water Resistance</td>
+                                            <td>IP68 (up to 6m for 30 mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Dimensions</td>
+                                            <td>160.9 x 77.8 x 7.85 mm</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Reviews Tab -->
+                        <div class="tab-pane fade" id="reviews" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold mb-0">Customer Reviews</h5>
+                                <button class="btn btn-primary rounded-pill">Write a Review</button>
+                            </div>
+
+                            <div class="review-summary mb-4 p-4 bg-light rounded">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 text-center">
+                                        <h2 class="fw-bold mb-0">4.5</h2>
+                                        <div class="mb-2">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-half text-warning"></i>
+                                        </div>
+                                        <p class="text-muted small mb-0">Based on 128 reviews</p>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="mb-2">
+                                            <small class="text-muted">5 stars</small>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                            </div>
+                                            <small class="text-muted">65%</small>
+                                        </div>
+                                        <div class="mb-2">
+                                            <small class="text-muted">4 stars</small>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                            </div>
+                                            <small class="text-muted">25%</small>
+                                        </div>
+                                        <div class="mb-2">
+                                            <small class="text-muted">3 stars</small>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" style="width: 7%"></div>
+                                            </div>
+                                            <small class="text-muted">7%</small>
+                                        </div>
+                                        <div class="mb-2">
+                                            <small class="text-muted">2 stars</small>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" style="width: 2%"></div>
+                                            </div>
+                                            <small class="text-muted">2%</small>
+                                        </div>
+                                        <div>
+                                            <small class="text-muted">1 star</small>
+                                            <div class="progress" style="height: 8px;">
+                                                <div class="progress-bar bg-warning" style="width: 1%"></div>
+                                            </div>
+                                            <small class="text-muted">1%</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Review Items -->
+                            <div class="review-item border-bottom pb-4 mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">John Doe</h6>
+                                        <div class="mb-2">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <span class="text-muted small ms-2">Verified Purchase</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-muted small">2 days ago</span>
+                                </div>
+                                <p class="text-muted">Excellent phone! The camera quality is outstanding and the battery lasts all day. Highly recommend this product to anyone looking for a premium smartphone experience.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-hand-thumbs-up"></i> Helpful (12)</button>
+                                </div>
+                            </div>
+
+                            <div class="review-item border-bottom pb-4 mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Sarah Smith</h6>
+                                        <div class="mb-2">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star text-warning"></i>
+                                            <span class="text-muted small ms-2">Verified Purchase</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-muted small">5 days ago</span>
+                                </div>
+                                <p class="text-muted">Great phone overall. The display is beautiful and the performance is smooth. Only minor issue is the weight, but it's manageable.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-hand-thumbs-up"></i> Helpful (8)</button>
+                                </div>
+                            </div>
+
+                            <div class="review-item border-bottom pb-4 mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Mike Johnson</h6>
+                                        <div class="mb-2">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-half text-warning"></i>
+                                            <span class="text-muted small ms-2">Verified Purchase</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-muted small">1 week ago</span>
+                                </div>
+                                <p class="text-muted">Very satisfied with my purchase. The phone works perfectly and the customer service was excellent when I had questions about setup.</p>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="bi bi-hand-thumbs-up"></i> Helpful (15)</button>
+                                </div>
+                            </div>
+
+                            <nav aria-label="Review pagination">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Shipping Tab -->
+                        <div class="tab-pane fade" id="shipping" role="tabpanel">
+                            <h5 class="fw-bold mb-4">Shipping & Returns</h5>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="fw-bold mb-3"><i class="bi bi-truck text-primary me-2"></i>Shipping Information</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Free standard shipping on orders over $50</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Express shipping available (2-3 business days)</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Overnight shipping available for select items</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>International shipping available</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Track your order in real-time</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="fw-bold mb-3"><i class="bi bi-arrow-repeat text-primary me-2"></i>Return Policy</h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>30-day return policy</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Items must be in original condition</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Free return shipping for defective items</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Refund processed within 5-7 business days</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Easy online return process</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products py-5 bg-light">
+        <div class="container">
+            <h3 class="fw-bold mb-4">You May Also Like</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-success text-white">Sale</div>
+                            <a href="product-detail.html">
+                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-headphones fs-1 text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Wireless Headphones</a></h5>
+                            <p class="text-muted small mb-2">Premium Sound</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$149.99</span>
+                                <span class="text-muted text-decoration-line-through">$199.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-warning text-white">Hot</div>
+                            <a href="product-detail.html">
+                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-laptop fs-1 text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Laptop Ultra</a></h5>
+                            <p class="text-muted small mb-2">High Performance</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$899.99</span>
+                                <span class="text-muted text-decoration-line-through">$1199.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-info text-white">Trending</div>
+                            <a href="product-detail.html">
+                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-watch fs-1 text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Smart Watch</a></h5>
+                            <p class="text-muted small mb-2">Fitness Tracker</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$199.99</span>
+                                <span class="text-muted text-decoration-line-through">$249.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card product-item h-100">
+                        <div class="product-image">
+                            <div class="product-badge bg-danger text-white">New</div>
+                            <a href="product-detail.html">
+                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-tablet fs-1 text-muted"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Tablet Air</a></h5>
+                            <p class="text-muted small mb-2">10.9 inch Display</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$449.99</span>
+                                <span class="text-muted text-decoration-line-through">$599.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Quantity controls
+        document.getElementById('increaseQty').addEventListener('click', function() {
+            const qty = document.getElementById('quantity');
+            if (parseInt(qty.value) < 10) {
+                qty.value = parseInt(qty.value) + 1;
+            }
+        });
+        document.getElementById('decreaseQty').addEventListener('click', function() {
+            const qty = document.getElementById('quantity');
+            if (parseInt(qty.value) > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

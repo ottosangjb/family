@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html?category=electronics">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=fashion">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=home">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=sports">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html?deal=super">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html?offer=special">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Login</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="login-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="login-icon rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                    <i class="bi bi-person-fill fs-1"></i>
+                                </div>
+                                <h2 class="fw-bold mb-2">Welcome Back!</h2>
+                                <p class="text-muted">Sign in to your account to continue</p>
+                            </div>
+
+                            <!-- Login Form -->
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Email Address <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Password <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                        <input type="password" class="form-control" placeholder="Enter your password" id="password" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="#" class="text-primary text-decoration-none">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 btn-lg rounded-pill mb-3">
+                                    <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
+                                </button>
+
+                                <div class="text-center mb-3">
+                                    <span class="text-muted">Or continue with</span>
+                                </div>
+
+                                <!-- Social Login -->
+                                <div class="row g-2 mb-4">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-secondary w-100 rounded-pill">
+                                            <i class="bi bi-google me-2"></i>Google
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-outline-secondary w-100 rounded-pill">
+                                            <i class="bi bi-facebook me-2"></i>Facebook
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <p class="text-muted mb-0">
+                                        Don't have an account? 
+                                        <a href="signup.html" class="text-primary fw-bold text-decoration-none">Sign Up</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Security Notice -->
+                    <div class="card border-0 bg-light mt-4">
+                        <div class="card-body p-4 text-center">
+                            <i class="bi bi-shield-check text-primary fs-4 mb-2"></i>
+                            <p class="text-muted small mb-0">Your account is protected by 256-bit SSL encryption. We never share your personal information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const password = document.getElementById('password');
+            const icon = this.querySelector('i');
+            if (password.type === 'password') {
+                password.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                password.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

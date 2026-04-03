@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Complete - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Order Complete Section -->
+    <section class="order-complete-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Success Message -->
+                    <div class="text-center mb-5">
+                        <div class="success-icon mb-4">
+                            <div class="rounded-circle bg-success d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                                <i class="bi bi-check-lg text-white" style="font-size: 4rem;"></i>
+                            </div>
+                        </div>
+                        <h1 class="fw-bold mb-3">Order Placed Successfully!</h1>
+                        <p class="lead text-muted mb-4">Thank you for your purchase. We've received your order and will begin processing it right away.</p>
+                        <div class="alert alert-info d-inline-block">
+                            <strong>Order Number:</strong> #ORD-2026-001234
+                        </div>
+                    </div>
+
+                    <!-- Order Details Card -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-receipt me-2"></i>Order Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold mb-3">Shipping Address</h6>
+                                    <p class="mb-1"><strong>John Doe</strong></p>
+                                    <p class="text-muted small mb-1">123 Main Street, Apt 4B</p>
+                                    <p class="text-muted small mb-1">New York, NY 10001</p>
+                                    <p class="text-muted small mb-0">United States</p>
+                                    <p class="text-muted small mt-2 mb-0"><i class="bi bi-telephone me-1"></i>+1 (555) 123-4567</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold mb-3">Payment Information</h6>
+                                    <p class="mb-1"><strong>Payment Method:</strong> Credit Card</p>
+                                    <p class="mb-1"><strong>Card Ending:</strong> **** 3456</p>
+                                    <p class="mb-1"><strong>Payment Status:</strong> <span class="badge bg-success">Paid</span></p>
+                                    <p class="mb-0"><strong>Transaction ID:</strong> TXN-789456123</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Order Items -->
+                            <h6 class="fw-bold mb-3">Order Items</h6>
+                            <div class="order-items">
+                                <div class="d-flex mb-3 pb-3 border-bottom">
+                                    <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded me-3" style="width: 80px; height: 80px;">
+                                        <i class="bi bi-phone text-muted fs-4"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Smartphone Pro Max</h6>
+                                        <p class="text-muted small mb-1">128GB, Space Gray</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-muted small">Quantity: 1</span>
+                                            <span class="fw-bold text-primary">$299.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3 pb-3 border-bottom">
+                                    <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded me-3" style="width: 80px; height: 80px;">
+                                        <i class="bi bi-headphones text-muted fs-4"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Wireless Headphones</h6>
+                                        <p class="text-muted small mb-1">Premium Sound, Black</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-muted small">Quantity: 2</span>
+                                            <span class="fw-bold text-primary">$299.98</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded me-3" style="width: 80px; height: 80px;">
+                                        <i class="bi bi-watch text-muted fs-4"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Smart Watch Pro</h6>
+                                        <p class="text-muted small mb-1">Fitness Tracker, Silver</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="text-muted small">Quantity: 1</span>
+                                            <span class="fw-bold text-primary">$199.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Price Summary -->
+                            <div class="price-summary">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Subtotal</span>
+                                    <span class="fw-bold">$749.97</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Shipping</span>
+                                    <span class="fw-bold text-success">FREE</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Tax</span>
+                                    <span class="fw-bold">$60.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Discount</span>
+                                    <span class="fw-bold text-success">-$200.00</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="fw-bold fs-5">Total Paid</span>
+                                    <span class="fw-bold fs-5 text-primary">$609.97</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Information -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-truck text-primary me-2"></i>Shipping Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1"><strong>Shipping Method:</strong></p>
+                                    <p class="text-muted">Standard Shipping (FREE)</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1"><strong>Estimated Delivery:</strong></p>
+                                    <p class="text-muted">5-7 business days</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="mb-1"><strong>Tracking Number:</strong></p>
+                                    <p class="text-muted mb-3">Will be sent via email once your order ships</p>
+                                    <a href="tracking-order.html" class="btn btn-outline-primary rounded-pill">
+                                        <i class="bi bi-truck me-2"></i>Track Order
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-info-circle text-primary me-2"></i>What's Next?</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="text-center">
+                                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                            <i class="bi bi-envelope-check text-primary fs-4"></i>
+                                        </div>
+                                        <h6 class="fw-bold">1. Order Confirmation</h6>
+                                        <p class="text-muted small">You'll receive an email confirmation shortly with your order details.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3 mb-md-0">
+                                    <div class="text-center">
+                                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                            <i class="bi bi-box-seam text-primary fs-4"></i>
+                                        </div>
+                                        <h6 class="fw-bold">2. Order Processing</h6>
+                                        <p class="text-muted small">We'll prepare your order and notify you when it ships.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <div class="rounded-circle bg-light d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                                            <i class="bi bi-truck text-primary fs-4"></i>
+                                        </div>
+                                        <h6 class="fw-bold">3. Delivery</h6>
+                                        <p class="text-muted small">Track your package and receive it at your doorstep.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="text-center mb-5">
+                        <a href="../index.html" class="btn btn-primary btn-lg rounded-pill px-5 me-2 mb-2">
+                            <i class="bi bi-bag me-2"></i>Continue Shopping
+                        </a>
+                        <button class="btn btn-outline-primary btn-lg rounded-pill px-5 mb-2 me-2">
+                            <i class="bi bi-download me-2"></i>Download Invoice
+                        </button>
+                        <a href="tracking-order.html" class="btn btn-outline-secondary btn-lg rounded-pill px-5 mb-2">
+                            <i class="bi bi-truck me-2"></i>Track Order
+                        </a>
+                    </div>
+
+                    <!-- Help Section -->
+                    <div class="card bg-light">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-question-circle text-primary me-2"></i>Need Help?</h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <p class="mb-1"><strong>Track Your Order</strong></p>
+                                    <p class="text-muted small mb-2">Use your order number to track the status of your shipment.</p>
+                                    <a href="tracking-order.html" class="btn btn-outline-primary btn-sm rounded-pill">Track Order</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <p class="mb-1"><strong>Contact Support</strong></p>
+                                    <p class="text-muted small mb-2">Have questions? Our support team is here to help.</p>
+                                    <a href="contact.html" class="btn btn-outline-primary btn-sm rounded-pill">Contact Us</a>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div class="row text-center">
+                                <div class="col-md-4 mb-2 mb-md-0">
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <small>+1 (555) 123-4567</small>
+                                </div>
+                                <div class="col-md-4 mb-2 mb-md-0">
+                                    <i class="bi bi-envelope text-primary me-2"></i>
+                                    <small>support@demomart.com</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <i class="bi bi-clock text-primary me-2"></i>
+                                    <small>Mon-Fri: 9AM-6PM EST</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

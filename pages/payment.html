@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html" class="text-decoration-none">Cart</a></li>
+                    <li class="breadcrumb-item"><a href="checkout.html" class="text-decoration-none">Checkout</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Payment</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section py-5">
+        <div class="container">
+            <h1 class="fw-bold mb-4">Payment</h1>
+            
+            <div class="row">
+                <!-- Payment Methods -->
+                <div class="col-lg-8 mb-4">
+                    <!-- Payment Method Selection -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-credit-card text-primary me-2"></i>Payment Method</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="payment-methods">
+                                <div class="form-check mb-3 p-3 border rounded payment-option">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                                    <label class="form-check-label w-100" for="creditCard">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-credit-card-2-front fs-3 text-primary me-3"></i>
+                                            <div>
+                                                <strong>Credit/Debit Card</strong>
+                                                <p class="text-muted small mb-0">Visa, Mastercard, American Express</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3 p-3 border rounded payment-option">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                    <label class="form-check-label w-100" for="paypal">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-paypal fs-3 text-primary me-3"></i>
+                                            <div>
+                                                <strong>PayPal</strong>
+                                                <p class="text-muted small mb-0">Pay securely with your PayPal account</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check mb-3 p-3 border rounded payment-option">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="applePay">
+                                    <label class="form-check-label w-100" for="applePay">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-apple fs-3 text-primary me-3"></i>
+                                            <div>
+                                                <strong>Apple Pay</strong>
+                                                <p class="text-muted small mb-0">Pay with Apple Pay</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="form-check p-3 border rounded payment-option">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="googlePay">
+                                    <label class="form-check-label w-100" for="googlePay">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-google fs-3 text-primary me-3"></i>
+                                            <div>
+                                                <strong>Google Pay</strong>
+                                                <p class="text-muted small mb-0">Pay with Google Pay</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Credit Card Form -->
+                    <div id="creditCardForm" class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold mb-0">Card Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Card Number <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                <small class="text-muted">Enter the 16-digit number on your card</small>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">Expiry Date <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="MM/YY" maxlength="5" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">CVV <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="123" maxlength="4" required>
+                                    <small class="text-muted">3 or 4 digits on the back of your card</small>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Cardholder Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="saveCard">
+                                <label class="form-check-label" for="saveCard">
+                                    Save this card for future purchases
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PayPal Form (Hidden by default) -->
+                    <div id="paypalForm" class="card mb-4" style="display: none;">
+                        <div class="card-body text-center py-5">
+                            <i class="bi bi-paypal fs-1 text-primary mb-3"></i>
+                            <h5 class="fw-bold mb-3">Pay with PayPal</h5>
+                            <p class="text-muted mb-4">You will be redirected to PayPal to complete your payment securely.</p>
+                            <button class="btn btn-primary btn-lg rounded-pill px-5">Continue to PayPal</button>
+                        </div>
+                    </div>
+
+                    <!-- Apple Pay Form (Hidden by default) -->
+                    <div id="applePayForm" class="card mb-4" style="display: none;">
+                        <div class="card-body text-center py-5">
+                            <i class="bi bi-apple fs-1 text-primary mb-3"></i>
+                            <h5 class="fw-bold mb-3">Pay with Apple Pay</h5>
+                            <p class="text-muted mb-4">Complete your payment using Apple Pay on your device.</p>
+                            <button class="btn btn-dark btn-lg rounded-pill px-5">
+                                <i class="bi bi-apple me-2"></i>Pay with Apple Pay
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Google Pay Form (Hidden by default) -->
+                    <div id="googlePayForm" class="card mb-4" style="display: none;">
+                        <div class="card-body text-center py-5">
+                            <i class="bi bi-google fs-1 text-primary mb-3"></i>
+                            <h5 class="fw-bold mb-3">Pay with Google Pay</h5>
+                            <p class="text-muted mb-4">Complete your payment using Google Pay.</p>
+                            <button class="btn btn-primary btn-lg rounded-pill px-5">
+                                <i class="bi bi-google me-2"></i>Pay with Google Pay
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Billing Address Summary -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-house-door text-primary me-2"></i>Billing Address</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    <p class="mb-1"><strong>John Doe</strong></p>
+                                    <p class="text-muted small mb-1">123 Main Street, Apt 4B</p>
+                                    <p class="text-muted small mb-1">New York, NY 10001</p>
+                                    <p class="text-muted small mb-0">United States</p>
+                                </div>
+                            </div>
+                            <a href="checkout.html" class="btn btn-outline-secondary btn-sm rounded-pill">
+                                <i class="bi bi-pencil me-2"></i>Edit Address
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card sticky-top" style="top: 100px;">
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold mb-0">Order Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Order Items -->
+                            <div class="order-items mb-3">
+                                <div class="d-flex mb-3 pb-3 border-bottom">
+                                    <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded me-3" style="width: 60px; height: 60px;">
+                                        <i class="bi bi-phone text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 small">Smartphone Pro Max</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <span class="fw-bold text-primary">$299.99</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3 pb-3 border-bottom">
+                                    <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded me-3" style="width: 60px; height: 60px;">
+                                        <i class="bi bi-headphones text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 small">Wireless Headphones</h6>
+                                        <p class="text-muted small mb-0">Qty: 2</p>
+                                        <span class="fw-bold text-primary">$149.99</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded me-3" style="width: 60px; height: 60px;">
+                                        <i class="bi bi-watch text-muted"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 small">Smart Watch Pro</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <span class="fw-bold text-primary">$199.99</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- Price Breakdown -->
+                            <div class="price-breakdown mb-3">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Subtotal</span>
+                                    <span class="fw-bold">$749.97</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Shipping</span>
+                                    <span class="fw-bold text-success">FREE</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Tax</span>
+                                    <span class="fw-bold">$60.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Discount</span>
+                                    <span class="fw-bold text-success">-$200.00</span>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="fw-bold fs-5">Total</span>
+                                <span class="fw-bold fs-5 text-primary">$609.97</span>
+                            </div>
+
+                            <a href="complete.html" class="btn btn-primary w-100 btn-lg rounded-pill mb-3" id="completeOrder">
+                                <i class="bi bi-shield-lock me-2"></i>Complete Order
+                            </a>
+                            <a href="checkout.html" class="btn btn-outline-secondary w-100 rounded-pill">
+                                <i class="bi bi-arrow-left me-2"></i>Back to Checkout
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Security Info -->
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="bi bi-shield-check text-primary me-2"></i>Secure Payment</h6>
+                            <p class="text-muted small mb-3">Your payment is protected by 256-bit SSL encryption. We never store your full card details.</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <i class="bi bi-shield-lock fs-4 text-primary"></i>
+                                <div>
+                                    <small class="fw-bold d-block">SSL Encrypted</small>
+                                    <small class="text-muted">256-bit encryption</small>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <i class="bi bi-patch-check fs-4 text-success"></i>
+                                <div>
+                                    <small class="fw-bold d-block">PCI Compliant</small>
+                                    <small class="text-muted">Secure payment processing</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accepted Cards -->
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3">We Accept</h6>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <i class="bi bi-credit-card fs-3 text-muted"></i>
+                                <i class="bi bi-credit-card-2-front fs-3 text-muted"></i>
+                                <i class="bi bi-credit-card-2-back fs-3 text-muted"></i>
+                            </div>
+                            <p class="text-muted small mt-2 mb-0">Visa, Mastercard, American Express, Discover</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Toggle payment forms based on selection
+        const paymentMethods = document.querySelectorAll('input[name="paymentMethod"]');
+        paymentMethods.forEach(method => {
+            method.addEventListener('change', function() {
+                // Hide all forms
+                document.getElementById('creditCardForm').style.display = 'none';
+                document.getElementById('paypalForm').style.display = 'none';
+                document.getElementById('applePayForm').style.display = 'none';
+                document.getElementById('googlePayForm').style.display = 'none';
+                
+                // Show selected form
+                if (this.id === 'creditCard') {
+                    document.getElementById('creditCardForm').style.display = 'block';
+                } else if (this.id === 'paypal') {
+                    document.getElementById('paypalForm').style.display = 'block';
+                } else if (this.id === 'applePay') {
+                    document.getElementById('applePayForm').style.display = 'block';
+                } else if (this.id === 'googlePay') {
+                    document.getElementById('googlePayForm').style.display = 'block';
+                }
+            });
+        });
+
+        // Format card number
+        document.querySelector('input[placeholder="1234 5678 9012 3456"]').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+
+        // Format expiry date
+        document.querySelector('input[placeholder="MM/YY"]').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
+
+
+
+

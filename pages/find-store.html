@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Store - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Find Store</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Find Store Section -->
+    <section class="find-store-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold mb-3">Find a Store Near You</h1>
+                    <p class="lead text-muted">Visit one of our locations to experience our products in person</p>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Search by City or ZIP Code</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                                        <input type="text" class="form-control" placeholder="Enter city or ZIP code">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold">State</label>
+                                    <select class="form-select">
+                                        <option value="">All States</option>
+                                        <option value="NY">New York</option>
+                                        <option value="CA">California</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="IL">Illinois</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end">
+                                    <button class="btn btn-primary w-100 rounded-pill">
+                                        <i class="bi bi-search me-2"></i>Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Store List -->
+                <div class="col-lg-5 mb-4">
+                    <h3 class="fw-bold mb-4">Our Stores</h3>
+                    
+                    <!-- Store 1 -->
+                    <div class="card store-card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="fw-bold mb-2">DemoMart Times Square</h5>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                        123 Broadway, New York, NY 10036
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        (212) 555-0100
+                                    </p>
+                                </div>
+                                <span class="badge bg-success">Open Now</span>
+                            </div>
+                            <div class="store-hours mb-3">
+                                <p class="mb-1"><strong>Store Hours:</strong></p>
+                                <p class="text-muted small mb-0">Mon-Sat: 9:00 AM - 9:00 PM<br>Sun: 10:00 AM - 8:00 PM</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-primary btn-sm rounded-pill">
+                                    <i class="bi bi-map me-1"></i>Get Directions
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                                    <i class="bi bi-phone me-1"></i>Call Store
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store 2 -->
+                    <div class="card store-card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="fw-bold mb-2">DemoMart Los Angeles</h5>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                        456 Sunset Blvd, Los Angeles, CA 90028
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        (323) 555-0200
+                                    </p>
+                                </div>
+                                <span class="badge bg-success">Open Now</span>
+                            </div>
+                            <div class="store-hours mb-3">
+                                <p class="mb-1"><strong>Store Hours:</strong></p>
+                                <p class="text-muted small mb-0">Mon-Sat: 10:00 AM - 10:00 PM<br>Sun: 11:00 AM - 9:00 PM</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-primary btn-sm rounded-pill">
+                                    <i class="bi bi-map me-1"></i>Get Directions
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                                    <i class="bi bi-phone me-1"></i>Call Store
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store 3 -->
+                    <div class="card store-card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="fw-bold mb-2">DemoMart Chicago</h5>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                        789 Michigan Ave, Chicago, IL 60611
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        (312) 555-0300
+                                    </p>
+                                </div>
+                                <span class="badge bg-success">Open Now</span>
+                            </div>
+                            <div class="store-hours mb-3">
+                                <p class="mb-1"><strong>Store Hours:</strong></p>
+                                <p class="text-muted small mb-0">Mon-Sat: 9:00 AM - 9:00 PM<br>Sun: 10:00 AM - 8:00 PM</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-primary btn-sm rounded-pill">
+                                    <i class="bi bi-map me-1"></i>Get Directions
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                                    <i class="bi bi-phone me-1"></i>Call Store
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store 4 -->
+                    <div class="card store-card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="fw-bold mb-2">DemoMart Miami</h5>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                        321 Ocean Drive, Miami, FL 33139
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        (305) 555-0400
+                                    </p>
+                                </div>
+                                <span class="badge bg-warning">Closes Soon</span>
+                            </div>
+                            <div class="store-hours mb-3">
+                                <p class="mb-1"><strong>Store Hours:</strong></p>
+                                <p class="text-muted small mb-0">Mon-Sat: 10:00 AM - 10:00 PM<br>Sun: 11:00 AM - 9:00 PM</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-primary btn-sm rounded-pill">
+                                    <i class="bi bi-map me-1"></i>Get Directions
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                                    <i class="bi bi-phone me-1"></i>Call Store
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store 5 -->
+                    <div class="card store-card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="fw-bold mb-2">DemoMart Houston</h5>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                        654 Main Street, Houston, TX 77002
+                                    </p>
+                                    <p class="text-muted mb-1">
+                                        <i class="bi bi-telephone text-primary me-2"></i>
+                                        (713) 555-0500
+                                    </p>
+                                </div>
+                                <span class="badge bg-success">Open Now</span>
+                            </div>
+                            <div class="store-hours mb-3">
+                                <p class="mb-1"><strong>Store Hours:</strong></p>
+                                <p class="text-muted small mb-0">Mon-Sat: 9:00 AM - 9:00 PM<br>Sun: 10:00 AM - 8:00 PM</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-primary btn-sm rounded-pill">
+                                    <i class="bi bi-map me-1"></i>Get Directions
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm rounded-pill">
+                                    <i class="bi bi-phone me-1"></i>Call Store
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+                <div class="col-lg-7">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-0">
+                            <div class="map-placeholder bg-light d-flex align-items-center justify-content-center" style="height: 600px; border-radius: 15px;">
+                                <div class="text-center">
+                                    <i class="bi bi-geo-alt-fill text-primary" style="font-size: 4rem;"></i>
+                                    <h5 class="mt-3 fw-bold">Interactive Store Map</h5>
+                                    <p class="text-muted">Click on a store to view details and get directions</p>
+                                    <p class="text-muted small">(Map integration would be implemented here)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Store Features -->
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-4">What You'll Find in Our Stores</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="fw-bold">Expert Staff</h6>
+                                            <p class="text-muted small mb-0">Knowledgeable associates ready to help you find the perfect product.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="fw-bold">Try Before You Buy</h6>
+                                            <p class="text-muted small mb-0">Experience products hands-on before making a purchase.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="fw-bold">Same-Day Pickup</h6>
+                                            <p class="text-muted small mb-0">Order online and pick up in-store the same day.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="fw-bold">In-Store Events</h6>
+                                            <p class="text-muted small mb-0">Join workshops, product launches, and special events.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="fw-bold">Easy Returns</h6>
+                                            <p class="text-muted small mb-0">Return or exchange items purchased online at any store.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="fw-bold">Free Wi-Fi</h6>
+                                            <p class="text-muted small mb-0">Stay connected while you shop with complimentary Wi-Fi.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

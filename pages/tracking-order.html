@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - DemoMart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html?category=electronics">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=fashion">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=home">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=sports">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html?deal=super">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html?offer=special">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item active" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Track Order</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <section class="tracking-hero py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="tracking-eyebrow">Order Updates</span>
+                    <h1 class="fw-bold display-5 mt-3 mb-3">Track your order in real time</h1>
+                    <p class="lead text-muted mb-4">Check shipping progress, estimated delivery, package details, and support options from one place.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="tracking-mini-stat">
+                            <span class="tracking-mini-label">Average delivery</span>
+                            <strong>2-4 Days</strong>
+                        </div>
+                        <div class="tracking-mini-stat">
+                            <span class="tracking-mini-label">Live status</span>
+                            <strong>Updated hourly</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card tracking-search-card border-0">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="tracking-icon-circle me-3">
+                                    <i class="bi bi-box-seam"></i>
+                                </div>
+                                <div>
+                                    <h4 class="fw-bold mb-1">Find your shipment</h4>
+                                    <p class="text-muted mb-0">Use your order number and email to view the latest status.</p>
+                                </div>
+                            </div>
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Order Number</label>
+                                    <input type="text" class="form-control form-control-lg" value="#ORD-2026-001234" placeholder="Enter your order number">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg" value="john.doe@example.com" placeholder="Enter your email">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-lg" value="+1 (555) 123-4567" placeholder="Optional">
+                                </div>
+                                <button type="button" class="btn btn-primary btn-lg rounded-pill w-100">
+                                    <i class="bi bi-search me-2"></i>Track Order
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tracking-dashboard pb-5">
+        <div class="container">
+            <div class="card tracking-status-card border-0 mb-4">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-8">
+                            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                                <span class="badge bg-info-subtle text-info-emphasis tracking-badge">In Transit</span>
+                                <span class="text-muted">Last updated: Today, 2:45 PM</span>
+                            </div>
+                            <h2 class="fw-bold mb-2">Order #ORD-2026-001234 is on the way</h2>
+                            <p class="text-muted mb-4">Your package left the regional sorting facility and is moving toward the final delivery hub.</p>
+                            <div class="row g-3">
+                                <div class="col-sm-4">
+                                    <div class="tracking-summary-box">
+                                        <span class="tracking-summary-label">Estimated delivery</span>
+                                        <strong>March 27, 2026</strong>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="tracking-summary-box">
+                                        <span class="tracking-summary-label">Carrier</span>
+                                        <strong>Pio Express</strong>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="tracking-summary-box">
+                                        <span class="tracking-summary-label">Tracking ID</span>
+                                        <strong>PX-4589-2210</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="tracking-delivery-card">
+                                <span class="tracking-mini-label">Delivery Window</span>
+                                <h3 class="fw-bold mb-2">Tomorrow</h3>
+                                <p class="text-muted mb-3">Expected between 1:00 PM and 4:00 PM</p>
+                                <div class="progress tracking-progress" role="progressbar" aria-label="Shipping progress" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 72%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2 small text-muted">
+                                    <span>Processed</span>
+                                    <span>Out for delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 pt-4 px-4">
+                            <h4 class="fw-bold mb-1">Shipment timeline</h4>
+                            <p class="text-muted mb-0">Follow each step from confirmation to delivery.</p>
+                        </div>
+                        <div class="card-body px-4 pb-4">
+                            <div class="tracking-timeline">
+                                <div class="tracking-step completed">
+                                    <div class="tracking-step-marker"><i class="bi bi-check-lg"></i></div>
+                                    <div class="tracking-step-content">
+                                        <div class="d-flex flex-wrap justify-content-between gap-2">
+                                            <h6 class="fw-bold mb-1">Order confirmed</h6>
+                                            <span class="text-muted small">March 25, 2026 | 9:12 AM</span>
+                                        </div>
+                                        <p class="text-muted mb-0">Payment approved and order details sent to your email.</p>
+                                    </div>
+                                </div>
+                                <div class="tracking-step completed">
+                                    <div class="tracking-step-marker"><i class="bi bi-check-lg"></i></div>
+                                    <div class="tracking-step-content">
+                                        <div class="d-flex flex-wrap justify-content-between gap-2">
+                                            <h6 class="fw-bold mb-1">Packed at warehouse</h6>
+                                            <span class="text-muted small">March 25, 2026 | 2:35 PM</span>
+                                        </div>
+                                        <p class="text-muted mb-0">Your items were packed securely and prepared for pickup.</p>
+                                    </div>
+                                </div>
+                                <div class="tracking-step active">
+                                    <div class="tracking-step-marker"><i class="bi bi-truck"></i></div>
+                                    <div class="tracking-step-content">
+                                        <div class="d-flex flex-wrap justify-content-between gap-2">
+                                            <h6 class="fw-bold mb-1">In transit</h6>
+                                            <span class="text-muted small">March 26, 2026 | 2:45 PM</span>
+                                        </div>
+                                        <p class="text-muted mb-0">Package departed the Bangkok regional hub and is moving to your local station.</p>
+                                    </div>
+                                </div>
+                                <div class="tracking-step">
+                                    <div class="tracking-step-marker"><i class="bi bi-house-door"></i></div>
+                                    <div class="tracking-step-content">
+                                        <div class="d-flex flex-wrap justify-content-between gap-2">
+                                            <h6 class="fw-bold mb-1">Delivered</h6>
+                                            <span class="text-muted small">Estimated March 27, 2026</span>
+                                        </div>
+                                        <p class="text-muted mb-0">The courier will hand over the package to the delivery address.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 pt-4 px-4">
+                            <h4 class="fw-bold mb-1">Items in this shipment</h4>
+                            <p class="text-muted mb-0">Everything currently included in the tracked package.</p>
+                        </div>
+                        <div class="card-body px-4 pb-4">
+                            <div class="d-flex mb-3 pb-3 border-bottom">
+                                <div class="product-placeholder-img bg-light rounded me-3 flex-shrink-0" style="width: 88px; height: 88px;"></div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex flex-wrap justify-content-between gap-2">
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Smartphone Pro Max</h6>
+                                            <p class="text-muted small mb-1">128GB, Space Gray</p>
+                                            <span class="badge text-bg-light">Qty: 1</span>
+                                        </div>
+                                        <strong class="text-primary">$299.99</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="product-placeholder-img bg-light rounded me-3 flex-shrink-0" style="width: 88px; height: 88px;"></div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex flex-wrap justify-content-between gap-2">
+                                        <div>
+                                            <h6 class="fw-bold mb-1">Wireless Headphones</h6>
+                                            <p class="text-muted small mb-1">Premium Sound, Black</p>
+                                            <span class="badge text-bg-light">Qty: 2</span>
+                                        </div>
+                                        <strong class="text-primary">$299.98</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 pt-4 px-4">
+                            <h5 class="fw-bold mb-0">Delivery details</h5>
+                        </div>
+                        <div class="card-body px-4 pb-4">
+                            <div class="tracking-detail-row">
+                                <span>Recipient</span>
+                                <strong>John Doe</strong>
+                            </div>
+                            <div class="tracking-detail-row">
+                                <span>Address</span>
+                                <strong>123 Main Street, Apt 4B, New York, NY 10001</strong>
+                            </div>
+                            <div class="tracking-detail-row">
+                                <span>Shipping method</span>
+                                <strong>Standard Shipping</strong>
+                            </div>
+                            <div class="tracking-detail-row">
+                                <span>Signature required</span>
+                                <strong>No</strong>
+                            </div>
+                            <div class="tracking-detail-row border-0 pb-0 mb-0">
+                                <span>Support code</span>
+                                <strong>SUP-99821</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 pt-4 px-4">
+                            <h5 class="fw-bold mb-0">Need help?</h5>
+                        </div>
+                        <div class="card-body px-4 pb-4">
+                            <a href="contact.html" class="tracking-help-card text-decoration-none">
+                                <i class="bi bi-headset"></i>
+                                <div>
+                                    <strong>Contact support</strong>
+                                    <span>Ask about delays, address changes, or missing parcels.</span>
+                                </div>
+                            </a>
+                            <a href="faq.html" class="tracking-help-card text-decoration-none">
+                                <i class="bi bi-patch-question"></i>
+                                <div>
+                                    <strong>Read shipping FAQ</strong>
+                                    <span>Find answers about delivery times and return windows.</span>
+                                </div>
+                            </a>
+                            <a href="member.html" class="tracking-help-card text-decoration-none mb-0">
+                                <i class="bi bi-person-lines-fill"></i>
+                                <div>
+                                    <strong>Open account orders</strong>
+                                    <span>Review past purchases and saved delivery information.</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tracking-note-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="tracking-icon-circle small">
+                                <i class="bi bi-bell"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Delivery alerts enabled</h6>
+                                <p class="text-muted mb-0">We will send email updates when your package reaches the final delivery hub.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+
+

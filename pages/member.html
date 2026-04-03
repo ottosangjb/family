@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html?category=electronics">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=fashion">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=home">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=sports">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html?deal=super">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html?offer=special">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="member.html" class="text-decoration-none fw-bold">John Doe</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">My Account</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Member Dashboard Section -->
+    <section class="member-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <!-- User Profile -->
+                            <div class="text-center mb-4">
+                                <div class="member-avatar rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 100px; height: 100px;">
+                                    <i class="bi bi-person-fill" style="font-size: 3rem;"></i>
+                                </div>
+                                <h5 class="fw-bold mb-1">John Doe</h5>
+                                <p class="text-muted small mb-0">john.doe@example.com</p>
+                                <span class="badge bg-success mt-2">Verified Account</span>
+                            </div>
+
+                            <!-- Navigation Menu -->
+                            <ul class="nav nav-pills flex-column" id="memberTabs" role="tablist">
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link active w-100 text-start" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard" type="button" role="tab">
+                                        <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link w-100 text-start" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab">
+                                        <i class="bi bi-bag-check me-2"></i>My Orders
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link w-100 text-start" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">
+                                        <i class="bi bi-person me-2"></i>Profile Settings
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link w-100 text-start" id="addresses-tab" data-bs-toggle="tab" data-bs-target="#addresses" type="button" role="tab">
+                                        <i class="bi bi-geo-alt me-2"></i>Addresses
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link w-100 text-start" id="wishlist-tab" data-bs-toggle="tab" data-bs-target="#wishlist" type="button" role="tab">
+                                        <i class="bi bi-heart me-2"></i>Wishlist
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link w-100 text-start" id="payments-tab" data-bs-toggle="tab" data-bs-target="#payments" type="button" role="tab">
+                                        <i class="bi bi-credit-card me-2"></i>Payment Methods
+                                    </button>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <button class="nav-link w-100 text-start" id="rewards-tab" data-bs-toggle="tab" data-bs-target="#rewards" type="button" role="tab">
+                                        <i class="bi bi-star me-2"></i>Rewards & Points
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="login.html" class="nav-link w-100 text-start text-danger">
+                                        <i class="bi bi-box-arrow-right me-2"></i>Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="tab-content" id="memberTabsContent">
+                        <!-- Dashboard Tab -->
+                        <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                            <div class="card border-0 shadow-sm mb-4">
+                                <div class="card-header bg-white">
+                                    <h4 class="fw-bold mb-0">Dashboard</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Stats Cards -->
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="card bg-primary text-white">
+                                                <div class="card-body text-center">
+                                                    <i class="bi bi-bag-check fs-1 mb-2"></i>
+                                                    <h3 class="fw-bold mb-0">12</h3>
+                                                    <p class="mb-0 small">Total Orders</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="card bg-success text-white">
+                                                <div class="card-body text-center">
+                                                    <i class="bi bi-check-circle fs-1 mb-2"></i>
+                                                    <h3 class="fw-bold mb-0">8</h3>
+                                                    <p class="mb-0 small">Completed</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="card bg-warning text-white">
+                                                <div class="card-body text-center">
+                                                    <i class="bi bi-clock-history fs-1 mb-2"></i>
+                                                    <h3 class="fw-bold mb-0">3</h3>
+                                                    <p class="mb-0 small">Pending</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-3">
+                                            <div class="card bg-info text-white">
+                                                <div class="card-body text-center">
+                                                    <i class="bi bi-heart fs-1 mb-2"></i>
+                                                    <h3 class="fw-bold mb-0">15</h3>
+                                                    <p class="mb-0 small">Wishlist Items</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recent Orders -->
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-3">
+                                        <div>
+                                            <h5 class="fw-bold mb-1">Recent Orders</h5>
+                                            <p class="text-muted small mb-0">Monitor your latest purchases and shipping progress.</p>
+                                        </div>
+                                        <a href="tracking-order.html" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                                            <i class="bi bi-truck me-2"></i>Track Order
+                                        </a>
+                                    </div>
+                                    <div class="table-responsive recent-orders-table-wrap">
+                                        <table class="table table-hover align-middle recent-orders-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order #</th>
+                                                    <th>Date</th>
+                                                    <th>Items</th>
+                                                    <th>Total</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="order-code">#ORD-2026-001234</div>
+                                                        <span class="order-meta">Paid by Credit Card</span>
+                                                    </td>
+                                                    <td>Jan 15, 2026</td>
+                                                    <td>3 items</td>
+                                                    <td class="fw-bold">$609.97</td>
+                                                    <td><span class="badge status-badge status-delivered">Delivered</span></td>
+                                                    <td><a href="tracking-order.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="order-code">#ORD-2026-001189</div>
+                                                        <span class="order-meta">Packed at Warehouse</span>
+                                                    </td>
+                                                    <td>Jan 10, 2026</td>
+                                                    <td>2 items</td>
+                                                    <td class="fw-bold">$299.98</td>
+                                                    <td><span class="badge status-badge status-processing">Processing</span></td>
+                                                    <td><a href="tracking-order.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="order-code">#ORD-2026-001156</div>
+                                                        <span class="order-meta">Left Regional Hub</span>
+                                                    </td>
+                                                    <td>Jan 5, 2026</td>
+                                                    <td>1 item</td>
+                                                    <td class="fw-bold">$199.99</td>
+                                                    <td><span class="badge status-badge status-shipped">Shipped</span></td>
+                                                    <td><a href="tracking-order.html" class="btn btn-sm btn-outline-primary rounded-pill px-3">View</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Orders Tab -->
+                        <div class="tab-pane fade" id="orders" role="tabpanel">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h4 class="fw-bold mb-0">My Orders</h4>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Order Filters -->
+                                    <div class="d-flex gap-2 mb-4 flex-wrap">
+                                        <button class="btn btn-outline-primary active rounded-pill">All Orders</button>
+                                        <button class="btn btn-outline-secondary rounded-pill">Pending</button>
+                                        <button class="btn btn-outline-secondary rounded-pill">Shipped</button>
+                                        <button class="btn btn-outline-secondary rounded-pill">Delivered</button>
+                                        <button class="btn btn-outline-secondary rounded-pill">Cancelled</button>
+                                    </div>
+
+                                    <!-- Order List -->
+                                    <div class="order-item border rounded p-4 mb-3">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Order #ORD-2026-001234</h5>
+                                                <p class="text-muted small mb-0">Placed on January 15, 2026</p>
+                                            </div>
+                                            <span class="badge bg-success">Delivered</span>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-2 col-4 mb-2">
+                                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded" style="height: 80px;">
+                                                    <i class="bi bi-phone text-muted"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-4 mb-2">
+                                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded" style="height: 80px;">
+                                                    <i class="bi bi-headphones text-muted"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-4 mb-2">
+                                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded" style="height: 80px;">
+                                                    <i class="bi bi-watch text-muted"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div>
+                                                <p class="mb-0"><strong>Total:</strong> $609.97</p>
+                                                <p class="text-muted small mb-0">3 items</p>
+                                            </div>
+                                            <div class="d-flex gap-2">
+                                                <a href="complete.html" class="btn btn-outline-primary btn-sm rounded-pill">View Details</a>
+                                                <button class="btn btn-outline-secondary btn-sm rounded-pill">Reorder</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-item border rounded p-4 mb-3">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Order #ORD-2026-001189</h5>
+                                                <p class="text-muted small mb-0">Placed on January 10, 2026</p>
+                                            </div>
+                                            <span class="badge bg-warning">Processing</span>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-2 col-4 mb-2">
+                                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded" style="height: 80px;">
+                                                    <i class="bi bi-laptop text-muted"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-4 mb-2">
+                                                <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center rounded" style="height: 80px;">
+                                                    <i class="bi bi-tablet text-muted"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                            <div>
+                                                <p class="mb-0"><strong>Total:</strong> $299.98</p>
+                                                <p class="text-muted small mb-0">2 items</p>
+                                            </div>
+                                            <div class="d-flex gap-2">
+                                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">View Details</a>
+                                                <button class="btn btn-outline-danger btn-sm rounded-pill">Cancel Order</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Tab -->
+                        <div class="tab-pane fade" id="profile" role="tabpanel">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h4 class="fw-bold mb-0">Profile Settings</h4>
+                                </div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col-md-12 text-center mb-4">
+                                                <div class="member-avatar rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
+                                                    <i class="bi bi-person-fill" style="font-size: 4rem;"></i>
+                                                </div>
+                                                <button class="btn btn-outline-primary btn-sm rounded-pill">
+                                                    <i class="bi bi-camera me-2"></i>Change Photo
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">First Name</label>
+                                                <input type="text" class="form-control" value="John">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Last Name</label>
+                                                <input type="text" class="form-control" value="Doe">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Email Address</label>
+                                                <input type="email" class="form-control" value="john.doe@example.com">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Phone Number</label>
+                                                <input type="tel" class="form-control" value="+1 (555) 123-4567">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Date of Birth</label>
+                                                <input type="date" class="form-control" value="1990-01-15">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Gender</label>
+                                                <select class="form-select">
+                                                    <option value="male" selected>Male</option>
+                                                    <option value="female">Female</option>
+                                                    <option value="other">Other</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label class="form-label fw-bold">Bio</label>
+                                                <textarea class="form-control" rows="3" placeholder="Tell us about yourself..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <button type="submit" class="btn btn-primary rounded-pill px-4">Save Changes</button>
+                                            <button type="button" class="btn btn-outline-secondary rounded-pill px-4">Cancel</button>
+                                        </div>
+                                    </form>
+
+                                    <hr class="my-4">
+
+                                    <!-- Change Password -->
+                                    <h5 class="fw-bold mb-3">Change Password</h5>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Current Password</label>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">New Password</label>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label fw-bold">Confirm New Password</label>
+                                                <input type="password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary rounded-pill px-4">Update Password</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Addresses Tab -->
+                        <div class="tab-pane fade" id="addresses" role="tabpanel">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">My Addresses</h4>
+                                    <button class="btn btn-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                                        <i class="bi bi-plus me-2"></i>Add New Address
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="card border h-100">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                                        <h6 class="fw-bold mb-0">Home Address</h6>
+                                                        <span class="badge bg-primary">Default</span>
+                                                    </div>
+                                                    <p class="mb-2">John Doe</p>
+                                                    <p class="text-muted small mb-2">123 Main Street, Apt 4B</p>
+                                                    <p class="text-muted small mb-2">New York, NY 10001</p>
+                                                    <p class="text-muted small mb-3">United States</p>
+                                                    <div class="d-flex gap-2">
+                                                        <button class="btn btn-outline-primary btn-sm rounded-pill">Edit</button>
+                                                        <button class="btn btn-outline-danger btn-sm rounded-pill">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card border h-100">
+                                                <div class="card-body">
+                                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                                        <h6 class="fw-bold mb-0">Work Address</h6>
+                                                        <button class="btn btn-outline-primary btn-sm rounded-pill">Set as Default</button>
+                                                    </div>
+                                                    <p class="mb-2">John Doe</p>
+                                                    <p class="text-muted small mb-2">456 Business Ave, Suite 200</p>
+                                                    <p class="text-muted small mb-2">New York, NY 10002</p>
+                                                    <p class="text-muted small mb-3">United States</p>
+                                                    <div class="d-flex gap-2">
+                                                        <button class="btn btn-outline-primary btn-sm rounded-pill">Edit</button>
+                                                        <button class="btn btn-outline-danger btn-sm rounded-pill">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wishlist Tab -->
+                        <div class="tab-pane fade" id="wishlist" role="tabpanel">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h4 class="fw-bold mb-0">My Wishlist</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card product-item h-100">
+                                                <div class="product-image">
+                                                    <div class="product-badge bg-danger text-white">New</div>
+                                                    <a href="product-detail.html">
+                                                        <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                                            <i class="bi bi-phone fs-1 text-muted"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Smartphone Pro Max</a></h5>
+                                                    <p class="text-muted small mb-2">Latest Technology</p>
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <span class="fw-bold text-primary">$299.99</span>
+                                                        <span class="text-muted text-decoration-line-through">$399.99</span>
+                                                    </div>
+                                                    <div class="d-flex gap-2">
+                                                        <button class="btn btn-primary btn-sm flex-fill rounded-pill">Add to Cart</button>
+                                                        <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="bi bi-heart-fill"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card product-item h-100">
+                                                <div class="product-image">
+                                                    <div class="product-badge bg-success text-white">Sale</div>
+                                                    <a href="product-detail.html">
+                                                        <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                                            <i class="bi bi-headphones fs-1 text-muted"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Wireless Headphones</a></h5>
+                                                    <p class="text-muted small mb-2">Premium Sound</p>
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <span class="fw-bold text-primary">$149.99</span>
+                                                        <span class="text-muted text-decoration-line-through">$199.99</span>
+                                                    </div>
+                                                    <div class="d-flex gap-2">
+                                                        <button class="btn btn-primary btn-sm flex-fill rounded-pill">Add to Cart</button>
+                                                        <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="bi bi-heart-fill"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4">
+                                            <div class="card product-item h-100">
+                                                <div class="product-image">
+                                                    <div class="product-badge bg-warning text-white">Hot</div>
+                                                    <a href="product-detail.html">
+                                                        <div class="product-placeholder-img bg-light d-flex align-items-center justify-content-center">
+                                                            <i class="bi bi-laptop fs-1 text-muted"></i>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><a href="product-detail.html" class="text-decoration-none text-dark">Laptop Ultra</a></h5>
+                                                    <p class="text-muted small mb-2">High Performance</p>
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <span class="fw-bold text-primary">$899.99</span>
+                                                        <span class="text-muted text-decoration-line-through">$1199.99</span>
+                                                    </div>
+                                                    <div class="d-flex gap-2">
+                                                        <button class="btn btn-primary btn-sm flex-fill rounded-pill">Add to Cart</button>
+                                                        <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="bi bi-heart-fill"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payments Tab -->
+                        <div class="tab-pane fade" id="payments" role="tabpanel">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                    <h4 class="fw-bold mb-0">Payment Methods</h4>
+                                    <button class="btn btn-primary btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#addCardModal">
+                                        <i class="bi bi-plus me-2"></i>Add Card
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card border mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-credit-card-2-front fs-3 text-primary me-3"></i>
+                                                    <div>
+                                                        <h6 class="fw-bold mb-1">Visa ending in 3456</h6>
+                                                        <p class="text-muted small mb-0">Expires 12/25</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="badge bg-primary me-2">Default</span>
+                                                    <button class="btn btn-outline-primary btn-sm rounded-pill">Edit</button>
+                                                    <button class="btn btn-outline-danger btn-sm rounded-pill">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="bi bi-credit-card-2-front fs-3 text-primary me-3"></i>
+                                                    <div>
+                                                        <h6 class="fw-bold mb-1">Mastercard ending in 7890</h6>
+                                                        <p class="text-muted small mb-0">Expires 08/24</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="btn btn-outline-primary btn-sm rounded-pill me-2">Set as Default</button>
+                                                    <button class="btn btn-outline-primary btn-sm rounded-pill">Edit</button>
+                                                    <button class="btn btn-outline-danger btn-sm rounded-pill">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rewards Tab -->
+                        <div class="tab-pane fade" id="rewards" role="tabpanel">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-white">
+                                    <h4 class="fw-bold mb-0">Rewards & Points</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-4">
+                                        <div class="col-md-6">
+                                            <div class="card bg-primary text-white">
+                                                <div class="card-body text-center p-4">
+                                                    <i class="bi bi-star-fill fs-1 mb-3"></i>
+                                                    <h2 class="fw-bold mb-2">2,450</h2>
+                                                    <p class="mb-0">Reward Points</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card bg-success text-white">
+                                                <div class="card-body text-center p-4">
+                                                    <i class="bi bi-trophy-fill fs-1 mb-3"></i>
+                                                    <h2 class="fw-bold mb-2">Gold</h2>
+                                                    <p class="mb-0">Member Level</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5 class="fw-bold mb-3">Points History</h5>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                    <th>Points</th>
+                                                    <th>Balance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Jan 15, 2026</td>
+                                                    <td>Order #ORD-2026-001234</td>
+                                                    <td class="text-success">+245</td>
+                                                    <td>2,450</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jan 10, 2026</td>
+                                                    <td>Order #ORD-2026-001189</td>
+                                                    <td class="text-success">+120</td>
+                                                    <td>2,205</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jan 5, 2026</td>
+                                                    <td>Order #ORD-2026-001156</td>
+                                                    <td class="text-success">+80</td>
+                                                    <td>2,085</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

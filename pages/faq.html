@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - DemoMart</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                    <span class="fw-bold fs-4">DemoMart</span>
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                                Browse Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="products.html">Electronics</a></li>
+                                <li><a class="dropdown-item" href="products.html">Fashion</a></li>
+                                <li><a class="dropdown-item" href="products.html">Home & Living</a></li>
+                                <li><a class="dropdown-item" href="products.html">Sports</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Supper Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="find-store.html">Find Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">
+                                Special Offer <i class="bi bi-fire text-danger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pageDropdown" role="button" data-bs-toggle="dropdown">
+                                Page
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                <li><a class="dropdown-item active" href="faq.html">FAQ</a></li>
+                                <li><a class="dropdown-item" href="how-to-order.html">How To Order</a></li>
+                                <li><a class="dropdown-item" href="tracking-order.html">Track Order</a></li>
+                                <li><a class="dropdown-item" href="terms-conditions.html">Terms & Conditions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Right Side Icons -->
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="#" class="text-dark"><i class="bi bi-search fs-5"></i></a>
+                        <a href="cart.html" class="text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                        <a href="member.html" class="text-dark"><i class="bi bi-person fs-5"></i></a>
+                        <span class="text-muted d-none d-md-inline">Hello, <a href="login.html" class="text-decoration-none">Login</a> <a href="signup.html" class="text-decoration-none">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bold mb-3">Frequently Asked Questions</h1>
+                    <p class="lead text-muted">Find answers to common questions about shopping, orders, shipping, and more.</p>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search for questions...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <!-- FAQ Categories -->
+                    <div class="d-flex gap-2 mb-4 flex-wrap justify-content-center">
+                        <button class="btn btn-outline-primary active rounded-pill">All Questions</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Orders</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Shipping</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Returns</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Payments</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Account</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Products</button>
+                    </div>
+
+                    <!-- FAQ Accordion -->
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Question 1 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                    <strong>How do I place an order?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Placing an order on DemoMart is easy! Simply browse our products, add items to your cart, and proceed to checkout. You can create an account for faster checkout, or checkout as a guest. Follow the steps to enter your shipping information, select a payment method, and complete your order. You'll receive an email confirmation once your order is placed.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <strong>What payment methods do you accept?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>We accept all major credit and debit cards including Visa, Mastercard, American Express, and Discover. We also accept PayPal, Apple Pay, and Google Pay. All payments are processed securely through encrypted SSL connections to protect your information.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <strong>How long does shipping take?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Shipping times vary depending on your location and the shipping method selected:</p>
+                                    <ul>
+                                        <li><strong>Standard Shipping:</strong> 5-7 business days (FREE on orders over $50)</li>
+                                        <li><strong>Express Shipping:</strong> 2-3 business days ($15.99)</li>
+                                        <li><strong>Overnight Shipping:</strong> Next business day ($29.99)</li>
+                                    </ul>
+                                    <p>You'll receive a tracking number via email once your order ships so you can track its progress.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <strong>What is your return policy?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>We offer a 30-day return policy on most items. Items must be in their original condition with tags attached and original packaging. To return an item:</p>
+                                    <ol>
+                                        <li>Log into your account and go to "My Orders"</li>
+                                        <li>Select the item you want to return</li>
+                                        <li>Follow the return instructions</li>
+                                        <li>Package the item securely and ship it back</li>
+                                    </ol>
+                                    <p>Refunds will be processed within 5-7 business days after we receive your return. Free return shipping is available for defective items.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    <strong>Can I track my order?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes! Once your order ships, you'll receive an email with a tracking number. You can also track your order by logging into your account and visiting "My Orders". Click on your order to view real-time tracking information and delivery status.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 6 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                    <strong>Do you ship internationally?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes, we ship to many countries worldwide. International shipping rates and delivery times vary by location. Shipping costs will be calculated at checkout based on your destination. Please note that international orders may be subject to customs duties and taxes, which are the responsibility of the customer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 7 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                                    <strong>How do I create an account?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Creating an account is quick and easy! Click on "Login/Sign Up" in the top right corner, then select "Sign Up". Enter your email address, create a password, and provide your basic information. You can also create an account during checkout. Having an account allows you to track orders, save addresses, and access exclusive deals.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 8 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                                    <strong>What if I receive a damaged or defective item?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>If you receive a damaged or defective item, please contact us immediately at support@demomart.com or call us at +1 (555) 123-4567. We'll arrange for a replacement or full refund at no cost to you. Please include photos of the damaged item and your order number in your message. We'll process your request within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 9 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingNine">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                                    <strong>Can I cancel or modify my order?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Orders can be cancelled or modified within 1 hour of placement, as long as they haven't been shipped yet. To cancel or modify your order, please contact us immediately at support@demomart.com or call us at +1 (555) 123-4567 with your order number. Once an order has been shipped, it cannot be cancelled, but you can return it after receiving it.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 10 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingTen">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                                    <strong>Do you offer gift wrapping?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Yes! We offer gift wrapping services for an additional fee. During checkout, you can select the gift wrapping option and add a personalized message. Gift-wrapped items will be beautifully packaged and can be sent directly to the recipient with a gift message included.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 11 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingEleven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
+                                    <strong>Are your products authentic?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Absolutely! We only sell authentic, brand-new products from authorized dealers and manufacturers. All our products come with manufacturer warranties and are guaranteed to be genuine. We carefully verify all suppliers and regularly audit our inventory to ensure product authenticity.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 12 -->
+                        <div class="accordion-item mb-3 border rounded">
+                            <h2 class="accordion-header" id="headingTwelve">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
+                                    <strong>How can I contact customer service?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>You can contact our customer service team in several ways:</p>
+                                    <ul>
+                                        <li><strong>Email:</strong> support@demomart.com (We respond within 24 hours)</li>
+                                        <li><strong>Phone:</strong> +1 (555) 123-4567 (Mon-Fri: 9AM-6PM EST)</li>
+                                        <li><strong>Live Chat:</strong> Available on our website during business hours</li>
+                                        <li><strong>Contact Form:</strong> Fill out the form on our Contact Us page</li>
+                                    </ul>
+                                    <p>Our friendly customer service team is here to help with any questions or concerns!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Still Have Questions -->
+                    <div class="card border-0 shadow-sm mt-5">
+                        <div class="card-body p-5 text-center">
+                            <i class="bi bi-chat-dots text-primary fs-1 mb-3"></i>
+                            <h4 class="fw-bold mb-3">Still Have Questions?</h4>
+                            <p class="text-muted mb-4">Can't find the answer you're looking for? Our customer service team is here to help.</p>
+                            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5">
+                                    <i class="bi bi-envelope me-2"></i>Contact Us
+                                </a>
+                                <a href="tel:+15551234567" class="btn btn-outline-primary btn-lg rounded-pill px-5">
+                                    <i class="bi bi-telephone me-2"></i>Call Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="footer-brand mb-3">
+                        <i class="bi bi-bag-fill text-primary me-2 fs-4"></i>
+                        <span class="fw-bold fs-4">DemoMart</span>
+                    </div>
+                    <p class="text-muted">Your trusted e-commerce platform for the best gadgets and fashion items. Shop with confidence and enjoy amazing deals every day.</p>
+                    <div class="social-links d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about-us.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="how-to-order.html" class="text-muted text-decoration-none">How To Order</a></li>
+                        <li class="mb-2"><a href="tracking-order.html" class="text-muted text-decoration-none">Track Order</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-muted text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Sports & Outdoors</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-muted text-decoration-none">Baby & Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates on new products and special offers.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="contact-info">
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i>+1 (555) 123-4567</p>
+                        <p class="mb-0"><i class="bi bi-envelope me-2"></i>info@demomart.com</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2026 DemoMart. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="payment-methods">
+                        <i class="bi bi-credit-card me-2 fs-5"></i>
+                        <i class="bi bi-paypal me-2 fs-5"></i>
+                        <i class="bi bi-wallet2 me-2 fs-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
+
+
+
